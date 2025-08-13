@@ -21,7 +21,6 @@ from data_generator import SalesDataGenerator
 # -----------------------------------------------------------------------------
 st.set_page_config(
     page_title="Sales Forecasting & Inventory Dashboard",
-    page_icon="📈",
     layout="wide",
     initial_sidebar_state="expanded"
 )
@@ -47,7 +46,7 @@ def train_forecaster(df):
 # -----------------------------------------------------------------------------
 # Sidebar controls
 # -----------------------------------------------------------------------------
-st.sidebar.header("🎛️ Controls")
+st.sidebar.header("Controls")
 
 # Data selection
 sample_size = st.sidebar.selectbox("Dataset Size", ["small", "medium"], index=0)
@@ -69,7 +68,7 @@ lead_time = st.sidebar.slider("Lead Time (days)", 1, 14, 7)
 # -----------------------------------------------------------------------------
 # Main dashboard
 # -----------------------------------------------------------------------------
-st.title("📈 Sales Forecasting & Inventory Optimization Dashboard")
+st.title("Sales Forecasting & Inventory Optimization Dashboard")
 
 # Key metrics
 total_sales = filtered_df["sales"].sum()
@@ -83,7 +82,7 @@ st.markdown("---")
 
 # Tabs
 sales_tab, forecast_tab, inventory_tab = st.tabs([
-    "📊 Sales Analysis", "🔮 Forecasting", "📦 Inventory Management"])
+    "Sales Analysis", "Forecasting", "Inventory Management"])
 
 # -----------------------------------------------------------------------------
 # Sales Tab
@@ -153,4 +152,4 @@ with inventory_tab:
     st.write(summary)
 
 st.markdown("---")
-st.markdown("Built with ❤️ using Streamlit  ·  © 2025")
+st.markdown("Built by Kunal Rao")
