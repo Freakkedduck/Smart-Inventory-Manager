@@ -82,15 +82,6 @@ Generated CSVs:
 
 ---
 
-## Deployment Options
-1. **Streamlit Community Cloud** (free)  
-   Push repo → share.streamlit.io → “New app” → done.
-2. **Heroku**  
-   Procfile / setup.sh already provided in `deployment/` (add if needed)
-3. **Docker** (add a Dockerfile if you prefer containerization)
-
----
-
 ## Screenshots
 *(add GIFs or PNGs of the dashboard once you run it)*
 
@@ -104,10 +95,5 @@ See `case_study.md` for a concise 2-page write-up quantifying:
 
 ---
 
-## Next Steps
-* Swap in your real sales & inventory tables (date, store, SKU, sales, promos)
-* Tune service levels & lead times per SKU-store
-* Add external regressors (weather, price)
-* Deploy to the cloud & link in your resume / portfolio
 
 > **Need help?** Create a GitHub Issue or drop me a DM on LinkedIn.
