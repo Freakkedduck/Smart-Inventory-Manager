@@ -7,11 +7,6 @@ This project delivers an end-to-end workflow that:
 3. Calculates safety stock, reorder points, and order quantities
 4. Presents everything in an interactive Streamlit dashboard
 
-> **Why it’s resume-ready**
-> * ML pipeline with feature engineering & cross-validation  
-> * Inventory math translating forecasts into business action  
-> * Deployable dashboard & clear repo structure
-
 ---
 
 ## Folder Structure
@@ -25,11 +20,8 @@ sales-forecasting-inventory/
 ├── inventory_optimization.py    ← Inventory math module
 ├── data_generator.py            ← Sample-data generator
 ├── case_study.md                ← 1–2-page business write-up
-└── notebooks/                   ← (optional) EDA & experiments
+
 ```
-
----
-
 ## Quick Start (local)
 ```bash
 # 1. Clone repo & install deps
@@ -39,9 +31,6 @@ pip install -r requirements.txt
 # 2. Launch dashboard
 streamlit run dashboard.py
 ```
-
----
-
 ## Command-Line Usage
 ```bash
 # Train model + evaluate
@@ -56,7 +45,6 @@ Generated CSVs:
 * `abc_analysis.csv` – ABC classes
 
 ---
-
 ## Key Technologies
 * **Python 3.8+**
 * **scikit-learn** – Gradient Boosting / Linear Regression
@@ -83,7 +71,7 @@ Generated CSVs:
 ---
 
 ## Screenshots
-*(add GIFs or PNGs of the dashboard once you run it)*
+*<img width="888" height="118" alt="image" src="https://github.com/user-attachments/assets/ef13092a-d0b7-40c6-83a8-494b0589fbad" />*
 
 ---
 
