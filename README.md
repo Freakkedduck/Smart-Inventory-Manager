@@ -1,4 +1,4 @@
-# Sales Forecasting & Inventory Optimization Project
+# Sales Forecasting & Inventory Optimization Project[https://freakkedduck-smart-inventory-manager-dashboard-ckyi6k.streamlit.app/]
 
 ## Overview
 This project delivers an end-to-end workflow that:
@@ -69,19 +69,5 @@ Generated CSVs:
 * EOQ helper in `inventory_optimization.py`
 
 ---
-
-## Screenshots
-*<img width="888" height="118" alt="image" src="https://github.com/user-attachments/assets/ef13092a-d0b7-40c6-83a8-494b0589fbad" />*
-
----
-
-## Case Study
-See `case_study.md` for a concise 2-page write-up quantifying:
-* 29 % forecast-error reduction  
-* 18 % stockout reduction @95 % service level  
-* $180 K annual cost savings
-
----
-
 
 > **Need help?** Create a GitHub Issue or drop me a DM on LinkedIn.
