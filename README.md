@@ -1,4 +1,4 @@
-# Sales Forecasting & Inventory Optimization Project[https://freakkedduck-smart-inventory-manager-dashboard-ckyi6k.streamlit.app/]
+# Sales Forecasting & Inventory Optimization Project
 
 ## Overview
 This project delivers an end-to-end workflow that:
@@ -9,17 +9,7 @@ This project delivers an end-to-end workflow that:
 
 ---
 
-## Folder Structure
-```
-sales-forecasting-inventory/
-├── README.md                    ← you’re here
-├── requirements.txt             ← Python deps
-├── main.py                      ← CLI runner (training / inventory)
-├── dashboard.py                 ← Streamlit web app
-├── forecasting.py               ← ML forecasting module
-├── inventory_optimization.py    ← Inventory math module
-├── data_generator.py            ← Sample-data generator
-├── case_study.md                ← 1–2-page business write-up
+## [Dashboard Link](https://freakkedduck-smart-inventory-manager-dashboard-ckyi6k.streamlit.app/)
 
 ```
 ## Quick Start (local)
