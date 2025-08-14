@@ -10,6 +10,7 @@ This project delivers an end-to-end workflow that:
 ---
 
 ## [Dashboard Link](https://freakkedduck-smart-inventory-manager-dashboard-ckyi6k.streamlit.app/)
+<img width="277" height="290" alt="image" src="https://github.com/user-attachments/assets/fa45e262-6b88-4c88-b047-ef596f9cdf63" />
 
 ```
 ## Quick Start (local)
