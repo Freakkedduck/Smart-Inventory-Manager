@@ -112,7 +112,7 @@ col1, col2 = st.columns(2)
 with col1:
     st.markdown(f"""
         <div style="
-            background-color:#FFFFFF; 
+            background-color:#000000; 
             padding:20px; 
             border-radius:12px; 
             box-shadow:0 6px 16px rgba(0,0,0,0.12); 
@@ -125,7 +125,7 @@ with col1:
 with col2:
     st.markdown(f"""
         <div style="
-            background-color:#FFFFFF; 
+            background-color:#000000; 
             padding:20px; 
             border-radius:12px; 
             box-shadow:0 6px 16px rgba(0,0,0,0.12); 
