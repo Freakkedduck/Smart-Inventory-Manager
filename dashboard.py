@@ -99,15 +99,42 @@ lead_time = st.sidebar.slider("Lead Time (days)", 1, 14, 7)
 # -----------------------------------------------------------------------------
 st.markdown("<h1>Sales Forecasting & Inventory Dashboard</h1>", unsafe_allow_html=True)
 
+
 # ------------------ Key Metrics ------------------
 total_sales = filtered_df["sales"].sum()
 avg_daily_sales = filtered_df["sales"].mean()
 
 st.markdown('<div class="section-card">', unsafe_allow_html=True)
 st.subheader("Key Metrics")
+
 col1, col2 = st.columns(2)
-col1.metric("Total Sales", f"${total_sales:,.0f}")
-col2.metric("Avg Daily Sales", f"${avg_daily_sales:,.1f}")
+
+with col1:
+    st.markdown(f"""
+        <div style="
+            background-color:#FFFFFF; 
+            padding:20px; 
+            border-radius:12px; 
+            box-shadow:0 6px 16px rgba(0,0,0,0.12); 
+            text-align:center;">
+            <h3 style="margin:0; color:#333;">Total Sales</h3>
+            <p style="font-size:1.5rem; font-weight:700; margin:5px 0;">${total_sales:,.0f}</p>
+        </div>
+    """, unsafe_allow_html=True)
+
+with col2:
+    st.markdown(f"""
+        <div style="
+            background-color:#FFFFFF; 
+            padding:20px; 
+            border-radius:12px; 
+            box-shadow:0 6px 16px rgba(0,0,0,0.12); 
+            text-align:center;">
+            <h3 style="margin:0; color:#333;">Avg Daily Sales</h3>
+            <p style="font-size:1.5rem; font-weight:700; margin:5px 0;">${avg_daily_sales:,.1f}</p>
+        </div>
+    """, unsafe_allow_html=True)
+
 st.markdown('</div>', unsafe_allow_html=True)
 
 # ------------------ Tabs ------------------
