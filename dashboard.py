@@ -30,13 +30,13 @@ st.markdown("""
     }
     h1 {
         font-weight: 700;
-        color: #222222;
+        color: #000000;
         text-align: center;
         margin-bottom: 1rem;
     }
     h2, h3 {
         font-weight: 600;
-        color: #333333;
+        color: #000000;
         margin-bottom: 0.8rem;
     }
    
