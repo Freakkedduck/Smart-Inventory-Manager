@@ -112,12 +112,12 @@ col1, col2 = st.columns(2)
 with col1:
     st.markdown(f"""
         <div style="
-            background-color:#000000; 
+            background-color:#ffffff; 
             padding:20px; 
             border-radius:12px; 
             box-shadow:0 6px 16px rgba(0,0,0,0.12); 
             text-align:center;">
-            <h3 style="margin:0; color:#ffffff;">Total Sales</h3>
+            <h3 style="margin:0; color:#000000;">Total Sales</h3>
             <p style="font-size:1.5rem; font-weight:700; margin:5px 0;">${total_sales:,.0f}</p>
         </div>
     """, unsafe_allow_html=True)
@@ -125,12 +125,12 @@ with col1:
 with col2:
     st.markdown(f"""
         <div style="
-            background-color:#000000; 
+            background-color:#ffffff; 
             padding:20px; 
             border-radius:12px; 
             box-shadow:0 6px 16px rgba(0,0,0,0.12); 
             text-align:center;">
-            <h3 style="margin:0; color:#ffffff;">Avg Daily Sales</h3>
+            <h3 style="margin:0; color:#000000;">Avg Daily Sales</h3>
             <p style="font-size:1.5rem; font-weight:700; margin:5px 0;">${avg_daily_sales:,.1f}</p>
         </div>
     """, unsafe_allow_html=True)
