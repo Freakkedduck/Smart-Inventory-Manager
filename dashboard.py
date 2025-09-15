@@ -17,7 +17,7 @@ st.set_page_config(
 )
 
 # -----------------------------------------------------------------------------
-# Custom CSS for Anthropic Theme (Space Mono)
+# Custom CSS for Anthropic Theme (Space Mono, clean + shadows)
 # -----------------------------------------------------------------------------
 st.markdown("""
     <style>
@@ -28,31 +28,43 @@ st.markdown("""
         background-color: #F5F7F9;
         color: #1C1C1C;
     }
-    h1, h2, h3 {
+    h1 {
         font-weight: 700;
+        color: #222222;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+    h2, h3 {
+        font-weight: 600;
         color: #333333;
-        letter-spacing: -0.5px;
+        margin-bottom: 0.8rem;
     }
     .section-card {
         background-color: #FFFFFF;
         padding: 25px;
         border-radius: 14px;
         margin-bottom: 25px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.12);
+        transition: all 0.2s ease-in-out;
+    }
+    .section-card:hover {
+        box-shadow: 0 10px 22px rgba(0,0,0,0.15);
+        transform: translateY(-2px);
     }
     .stMetric {
-        background: #FAFAFA;
+        background: #FFFFFF;
         border-radius: 10px;
         padding: 15px;
         text-align: center;
-        border: 1px solid #E0E0E0;
+        border: 1px solid #EAEAEA;
+        box-shadow: 0 3px 8px rgba(0,0,0,0.06);
     }
     .stMetric label {
-        color: #777777;
+        color: #555555;
     }
     .block-container {
-        padding-top: 1.5rem;
-        padding-bottom: 1.5rem;
+        padding-top: 1.2rem;
+        padding-bottom: 1.2rem;
     }
     </style>
 """, unsafe_allow_html=True)
@@ -88,14 +100,14 @@ families = st.sidebar.multiselect(
 
 filtered_df = df[(df["store_nbr"].isin(stores)) & (df["family"].isin(families))]
 
-st.sidebar.markdown("---")
+st.sidebar.markdown("**Inventory Settings**")
 service_level = st.sidebar.slider("Service Level (%)", 85, 99, 95) / 100
 lead_time = st.sidebar.slider("Lead Time (days)", 1, 14, 7)
 
 # -----------------------------------------------------------------------------
 # Main Dashboard
 # -----------------------------------------------------------------------------
-st.markdown("<h1 style='text-align:center;'>Sales Forecasting & Inventory Dashboard</h1>", unsafe_allow_html=True)
+st.markdown("<h1>Sales Forecasting & Inventory Dashboard</h1>", unsafe_allow_html=True)
 
 # ------------------ Key Metrics ------------------
 total_sales = filtered_df["sales"].sum()
@@ -122,12 +134,14 @@ with sales_tab:
     col1, col2 = st.columns(2)
     with col1:
         daily_sales = filtered_df.groupby("date")["sales"].sum().reset_index()
-        fig_trend = px.line(daily_sales, x="date", y="sales", title="Daily Sales Trend", template="simple_white")
+        fig_trend = px.line(daily_sales, x="date", y="sales", 
+                            title="Daily Sales Trend", template="simple_white")
         st.plotly_chart(fig_trend, use_container_width=True)
 
     with col2:
         family_sales = filtered_df.groupby("family")["sales"].sum().reset_index()
-        fig_family = px.bar(family_sales, x="family", y="sales", title="Sales by Product Family", template="simple_white")
+        fig_family = px.bar(family_sales, x="family", y="sales", 
+                            title="Sales by Product Family", template="simple_white")
         st.plotly_chart(fig_family, use_container_width=True)
 
     st.markdown('</div>', unsafe_allow_html=True)
@@ -152,7 +166,8 @@ with forecast_tab:
     forecast_df = model.predict(pd.concat([filtered_df, future_df]))
     forecast_df = forecast_df[forecast_df["date"].isin(future_dates)]
 
-    fig_forecast = px.line(forecast_df, x="date", y="predictions", title="30-Day Forecast", template="simple_white")
+    fig_forecast = px.line(forecast_df, x="date", y="predictions", 
+                           title="30-Day Forecast", template="simple_white")
     st.plotly_chart(fig_forecast, use_container_width=True)
 
     st.subheader("Model Performance on Historical Data")
@@ -180,7 +195,6 @@ with inventory_tab:
     st.markdown('</div>', unsafe_allow_html=True)
 
 # -----------------------------------------------------------------------------
-# Footer
+# Footer (light, subtle)
 # -----------------------------------------------------------------------------
-st.markdown("---")
-st.caption("Anthropic-inspired Dashboard | Space Mono Font | Built with Streamlit")
+st.caption("Anthropic-inspired Dashboard · Space Mono Font · Built with Streamlit")
