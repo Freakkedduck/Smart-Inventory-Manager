@@ -117,7 +117,7 @@ with col1:
             border-radius:12px; 
             box-shadow:0 6px 16px rgba(0,0,0,0.12); 
             text-align:center;">
-            <h3 style="margin:0; color:#333;">Total Sales</h3>
+            <h3 style="margin:0; color:#ffffff;">Total Sales</h3>
             <p style="font-size:1.5rem; font-weight:700; margin:5px 0;">${total_sales:,.0f}</p>
         </div>
     """, unsafe_allow_html=True)
@@ -130,7 +130,7 @@ with col2:
             border-radius:12px; 
             box-shadow:0 6px 16px rgba(0,0,0,0.12); 
             text-align:center;">
-            <h3 style="margin:0; color:#333;">Avg Daily Sales</h3>
+            <h3 style="margin:0; color:#ffffff;">Avg Daily Sales</h3>
             <p style="font-size:1.5rem; font-weight:700; margin:5px 0;">${avg_daily_sales:,.1f}</p>
         </div>
     """, unsafe_allow_html=True)
