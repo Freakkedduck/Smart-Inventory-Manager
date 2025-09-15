@@ -13,7 +13,7 @@ from data_generator import SalesDataGenerator
 st.set_page_config(
     page_title="Sales Forecasting & Inventory Dashboard",
     layout="wide",
-    page_icon="📊"
+    page_icon="🌐"
 )
 
 # -----------------------------------------------------------------------------
