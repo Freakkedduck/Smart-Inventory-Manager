@@ -39,17 +39,7 @@ st.markdown("""
         color: #333333;
         margin-bottom: 0.8rem;
     }
-    .section-card {
-        background-color: #FFFFFF;
-        padding: 25px;
-        border-radius: 14px;
-        margin-bottom: 25px;
-        box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-        transition: all 0.2s ease-in-out;
-    }
-    .section-card:hover {
-        box-shadow: 0 10px 22px rgba(0,0,0,0.15);
-        transform: translateY(-2px);
+   
     }
     .stMetric {
         background: #FFFFFF;
@@ -197,4 +187,4 @@ with inventory_tab:
 # -----------------------------------------------------------------------------
 # Footer (light, subtle)
 # -----------------------------------------------------------------------------
-st.caption("Anthropic-inspired Dashboard · Space Mono Font · Built with Streamlit")
+st.caption("Built by Kunal)
